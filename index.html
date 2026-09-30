@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineShare</title>
+
+    <title>CineShare - Animés & Films</title>
 
     <style>
         * {
@@ -24,11 +25,11 @@
             align-items: center;
             padding: 18px 6%;
             background: #12121a;
-            border-bottom: 1px solid #242430;
+            border-bottom: 1px solid #292936;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 25px;
             font-weight: bold;
         }
 
@@ -39,47 +40,62 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 20px;
+            margin-left: 18px;
         }
 
         .hero {
-            min-height: 430px;
+            min-height: 500px;
             display: flex;
             align-items: center;
-            padding: 50px 6%;
+            padding: 60px 7%;
             background:
-                linear-gradient(90deg, #0b0b0f 25%, rgba(11,11,15,.65)),
-                linear-gradient(135deg, #24113b, #101018);
+                linear-gradient(90deg, #0b0b0f 25%, rgba(11,11,15,.6)),
+                linear-gradient(135deg, #281342, #101018);
         }
 
         .hero-content {
-            max-width: 600px;
+            max-width: 650px;
         }
 
         .hero h1 {
             font-size: 48px;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .hero p {
-            color: #c8c8d0;
+            color: #c9c9d2;
             font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
         .btn {
             display: inline-block;
-            background: #e50914;
-            color: white;
+            padding: 14px 22px;
+            border-radius: 7px;
             text-decoration: none;
-            padding: 13px 22px;
-            border-radius: 6px;
             font-weight: bold;
         }
 
+        .btn-primary {
+            background: #e50914;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #252532;
+            color: white;
+            border: 1px solid #3b3b49;
+        }
+
         .section {
-            padding: 40px 6%;
+            padding: 45px 7%;
         }
 
         .section h2 {
@@ -96,20 +112,16 @@
             background: #16161f;
             border-radius: 10px;
             overflow: hidden;
-            transition: .3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
+            border: 1px solid #242430;
         }
 
         .poster {
-            height: 220px;
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #30204d, #16161f);
-            font-size: 45px;
+            background: linear-gradient(135deg, #33204e, #171720);
+            font-size: 50px;
         }
 
         .card-info {
@@ -123,18 +135,44 @@
         .card-info p {
             color: #9999a5;
             font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .download {
+            text-align: center;
+            padding: 60px 7%;
+            background: #12121a;
+        }
+
+        .download h2 {
+            margin-bottom: 15px;
+        }
+
+        .download p {
+            color: #aaaab5;
+            margin-bottom: 25px;
         }
 
         footer {
             text-align: center;
             padding: 30px;
-            background: #12121a;
             color: #888;
-            margin-top: 30px;
+            background: #0b0b0f;
         }
 
         footer strong {
             color: white;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            nav a {
+                margin-left: 8px;
+                font-size: 13px;
+            }
         }
     </style>
 </head>
@@ -149,12 +187,12 @@
 
     <nav>
         <a href="#">Accueil</a>
-        <a href="#">Animés</a>
-        <a href="#">Films</a>
-        <a href="#">Connexion</a>
+        <a href="#catalogue">Catalogue</a>
+        <a href="#download">Application</a>
     </nav>
 
 </header>
+
 
 <section class="hero">
 
@@ -163,30 +201,42 @@
         <h1>Bienvenue sur CineShare 🎬</h1>
 
         <p>
-            Une plateforme communautaire où les passionnés
-            d'animés et de films peuvent découvrir, partager
-            et échanger autour de leurs contenus préférés.
+            Découvrez une plateforme communautaire dédiée
+            aux animés, aux films et aux créations vidéo.
+            Découvrez, partagez et échangez avec la communauté.
         </p>
 
-        <a href="#catalogue" class="btn">
-            Découvrir les contenus
-        </a>
+        <div class="buttons">
+
+            <a href="#catalogue" class="btn btn-primary">
+                🎬 Découvrir
+            </a>
+
+            <a href="#download" class="btn btn-secondary">
+                📱 Télécharger l'application
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
+
 <section class="section" id="catalogue">
 
-    <h2>🔥 Contenus populaires</h2>
+    <h2>🔥 Explorer CineShare</h2>
 
     <div class="cards">
 
         <div class="card">
             <div class="poster">🎌</div>
             <div class="card-info">
-                <h3>Anime</h3>
-                <p>Découvrir les animés de la communauté</p>
+                <h3>Animés</h3>
+                <p>
+                    Découvrez les contenus animés
+                    disponibles sur la plateforme.
+                </p>
             </div>
         </div>
 
@@ -194,7 +244,10 @@
             <div class="poster">🎬</div>
             <div class="card-info">
                 <h3>Films</h3>
-                <p>Explorer les films disponibles</p>
+                <p>
+                    Explorez les films et créations
+                    disponibles légalement.
+                </p>
             </div>
         </div>
 
@@ -202,7 +255,10 @@
             <div class="poster">⭐</div>
             <div class="card-info">
                 <h3>Nouveautés</h3>
-                <p>Les dernières contributions</p>
+                <p>
+                    Retrouvez les dernières contributions
+                    de la communauté.
+                </p>
             </div>
         </div>
 
@@ -210,13 +266,34 @@
             <div class="poster">👥</div>
             <div class="card-info">
                 <h3>Communauté</h3>
-                <p>Partager et discuter avec les membres</p>
+                <p>
+                    Partagez vos découvertes et discutez
+                    avec les autres membres.
+                </p>
             </div>
         </div>
 
     </div>
 
 </section>
+
+
+<section class="download" id="download">
+
+    <h2>📱 Télécharger CineShare</h2>
+
+    <p>
+        Installez l'application CineShare sur votre téléphone Android.
+    </p>
+
+    <a
+        href="https://github.com/loupdemontagne30-cell/cineshare/releases/latest/download/CineShare.apk"
+        class="btn btn-primary">
+        ⬇️ Télécharger l'APK
+    </a>
+
+</section>
+
 
 <footer>
 
@@ -228,4 +305,4 @@
 </footer>
 
 </body>
-      </html>
+</html>
